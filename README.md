@@ -30,22 +30,29 @@ $ docker-compose exec app bash
 ```
 
 ```
-dbコンテナ：ここでmysqlを動かしている
+mysqlコンテナ：ここでmysqlを動かしている
 $ docker-compose exec mysql bash
 ```
 
 構築
+
+ルートの ` app.env.example ` をコピーして ` app.env ` ファイルを、
+
+mysqlディレクトリにある ` mysql.env.example ` をコピーして　` mysql.env` ファイルを
+
+それぞれ作成する
+
 
 ```
 $ docker-compose exec app bash
 ```
 
 ```
-bash# cp .env.example .env
+bash# cp app.env.example app.env
 ```
 
 ```
-bash# composer install
+bash# npm install
 
 bash# php artisan key:generate
 
@@ -54,21 +61,21 @@ bash# php artisan key:generate
 年率計算
 
 ```
-bash# php artisan calc
+bash# node calc.js
 ```
 
 CRUD操作
 
 ```
-bash# php artisan createusers
+bash# cd databases
 
-bash# php artisan selectusers
+bash# node create_table.js
 
-bash# php artisan updateusers
+bash# node createusers.js
 
-bash# php artisan deleteusers
-# 注意
+bash# node selectusers.js
 
-.envファイルの ` DB_HOST ` の項目は ` db ` にする
+bash# node updateusers.js
 
-mysqlのユーザやパスワードは ` mysql/Dockerfile ` に記述してある
+bash# node deleteusers.js
+```
