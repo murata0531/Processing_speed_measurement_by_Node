@@ -53,9 +53,6 @@ bash# cp app.env.example app.env
 
 ```
 bash# npm install
-
-bash# php artisan key:generate
-
 ```
 
 年率計算
