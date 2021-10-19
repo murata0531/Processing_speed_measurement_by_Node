@@ -48,10 +48,6 @@ $ docker-compose exec app bash
 ```
 
 ```
-bash# cp app.env.example app.env
-```
-
-```
 bash# npm install
 ```
 
