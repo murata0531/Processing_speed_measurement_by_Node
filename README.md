@@ -57,6 +57,12 @@ bash# npm install
 bash# node calc.js
 ```
 
+ライプニッツ級数で円周率を求める
+
+```
+bash# Leibniz.js
+```
+
 CRUD操作
 
 ```
